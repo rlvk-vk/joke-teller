@@ -6,6 +6,8 @@ const toggleButtonState = () => {
 }
 
 const tellMe = (joke) => {
+    joke = joke.trim().replace(/ /g, '%20')
+
     VoiceRSS.speech({
         key: '4cf35202c29a4a24928e011bf96b4079',
         src: joke,
