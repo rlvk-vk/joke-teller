@@ -1,0 +1,62 @@
+:root {
+    --blue: #45badd;
+    --white: white;
+    --pink: #ff3482;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blue);
+    margin: 0;
+}
+
+.container {
+    background: url("./robot.gif") no-repeat center;
+    background-size: cover;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    width: 100vw;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: var(--white);
+    background-color: var(--pink);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+    transition: all .25s;
+}
+
+button:hover {
+    filter: brightness(95%);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    filter: brightness(30%);
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        background-position: left center;
+        background-size: contain;
+    }
+
+    button {
+        box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+    }
+}
